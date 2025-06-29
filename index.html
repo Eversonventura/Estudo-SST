@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado de Saúde Ocupacional e SST no Ceará – Panorama e Estratégias</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="logo.png" alt="Aventure Comunicação" class="logo">
+            <h1 class="main-title">Mercado de Saúde Ocupacional e SST no Ceará</h1>
+            <p class="subtitle">Panorama e Estratégias</p>
+        </div>
+    </header>
+
+    <nav class="navigation">
+        <div class="container">
+            <ul class="nav-list">
+                <li><a href="#contexto" class="nav-link">Contexto e Panorama</a></li>
+                <li><a href="#tendencias" class="nav-link">Tendências Atuais</a></li>
+                <li><a href="#mercado" class="nav-link">Tamanho do Mercado</a></li>
+                <li><a href="#conclusao" class="nav-link">Conclusão</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section id="contexto" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-bar"></i>
+                    Contexto e Panorama Geral
+                </h2>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-gavel"></i>
+                            Demanda Regulatória e Perfil Regional
+                        </h3>
+                        <div class="card-content">
+                            <p>O mercado de Saúde e Segurança do Trabalho (SST) no Ceará é fortemente impulsionado por exigências legais. As Normas Regulamentadoras (NRs) do Ministério do Trabalho obrigam empresas de todos os portes a implementarem programas como:</p>
+                            
+                            <div class="bullet-list">
+                                <div class="bullet-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>PCMSO (Programa de Controle Médico de Saúde Ocupacional)</span>
+                                </div>
+                                <div class="bullet-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>PGR (Programa de Gerenciamento de Riscos)</span>
+                                </div>
+                                <div class="bullet-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Exames admissionais, periódicos, de retorno e demissionais</span>
+                                </div>
+                            </div>
+
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-number">6.000</div>
+                                    <div class="stat-label">Empresas com +50 funcionários no Ceará</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">50%</div>
+                                    <div class="stat-label">Dos empregos formais estão em Fortaleza</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">27%</div>
+                                    <div class="stat-label">Da população cearense vive em Fortaleza</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-users"></i>
+                            Decisores e Necessidades das Empresas
+                        </h3>
+                        <div class="card-content">
+                            <p>O departamento de Recursos Humanos (RH) das empresas é o principal responsável por contratar serviços de saúde ocupacional. Os critérios de escolha incluem:</p>
+                            
+                            <div class="criteria-list">
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div class="criteria-content">
+                                        <h4>Conformidade Legal</h4>
+                                        <p>Rigorosa aderência às NR-7 e eSocial</p>
+                                    </div>
+                                </div>
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="criteria-content">
+                                        <h4>Qualidade do Atendimento</h4>
+                                        <p>Excelência no cuidado aos colaboradores</p>
+                                    </div>
+                                </div>
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">
+                                        <i class="fas fa-user-md"></i>
+                                    </div>
+                                    <div class="criteria-content">
+                                        <h4>Profissionais Especializados</h4>
+                                        <p>Equipe qualificada e experiente</p>
+                                    </div>
+                                </div>
+                                <div class="criteria-item">
+                                    <div class="criteria-icon">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div class="criteria-content">
+                                        <h4>Agilidade</h4>
+                                        <p>Rapidez na emissão de laudos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-card">
+                        <h3 class="card-title">
+                            <i class="fas fa-brain"></i>
+                            Nível de Consciência e Maturidade do Mercado
+                        </h3>
+                        <div class="card-content">
+                            <div class="awareness-chart">
+                                <canvas id="awarenessChart"></canvas>
+                            </div>
+                            <div class="awareness-insights">
+                                <div class="insight-item high">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <span>Alto nível de consciência regulatória</span>
+                                </div>
+                                <div class="insight-item medium">
+                                    <i class="fas fa-arrow-right"></i>
+                                    <span>Consciência sobre diferenciais: baixo a médio</span>
+                                </div>
+                                <div class="insight-item opportunity">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Oportunidade de educação do mercado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tendencias" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-trending-up"></i>
+                    Tendências Atuais no Setor de SST
+                </h2>
+
+                <div class="trends-grid">
+                    <div class="trend-card">
+                        <div class="trend-icon">
+                            <i class="fas fa-laptop-medical"></i>
+                        </div>
+                        <h3 class="trend-title">Telemedicina Corporativa e Digitalização</h3>
+                        <div class="trend-content">
+                            <p>A pandemia acelerou a adoção de telemedicina na saúde ocupacional, incluindo:</p>
+                            <ul class="trend-list">
+                                <li><i class="fas fa-check"></i> Telelaudo para audiometrias e radiografias</li>
+                                <li><i class="fas fa-check"></i> Prontuários eletrônicos ocupacionais</li>
+                                <li><i class="fas fa-check"></i> Integração com eSocial e dashboards</li>
+                                <li><i class="fas fa-check"></i> Plataformas web para gestão de saúde</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trend-card">
+                        <div class="trend-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="trend-title">Foco em Bem-estar e ESG</h3>
+                        <div class="trend-content">
+                            <p>SST como parte do pilar Social do ESG, com ênfase em:</p>
+                            <ul class="trend-list">
+                                <li><i class="fas fa-check"></i> Qualidade de vida do trabalhador</li>
+                                <li><i class="fas fa-check"></i> Atração e retenção de talentos</li>
+                                <li><i class="fas fa-check"></i> Saúde mental (NR-1 atualizada)</li>
+                                <li><i class="fas fa-check"></i> Programas de apoio psicológico</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trend-card">
+                        <div class="trend-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="trend-title">SST como Vantagem Competitiva</h3>
+                        <div class="trend-content">
+                            <p>Transformação de custo em investimento estratégico:</p>
+                            <div class="roi-highlight">
+                                <div class="roi-value">R$ 2,20 - R$ 6,00</div>
+                                <div class="roi-description">Retorno para cada R$ 1,00 investido</div>
+                            </div>
+                            <ul class="trend-list">
+                                <li><i class="fas fa-check"></i> Marca empregadora diferenciada</li>
+                                <li><i class="fas fa-check"></i> Melhoria de produtividade</li>
+                                <li><i class="fas fa-check"></i> Redução de absenteísmo</li>
+                                <li><i class="fas fa-check"></i> Analytics e business intelligence</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mercado" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-chart-pie"></i>
+                    Tamanho de Mercado e Benchmarks
+                </h2>
+
+                <div class="market-overview">
+                    <div class="market-card">
+                        <h3 class="market-title">
+                            <i class="fas fa-building"></i>
+                            Empresas Alvo no Ceará
+                        </h3>
+                        <div class="market-content">
+                            <div class="market-stats">
+                                <div class="market-stat">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-industry"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <div class="stat-title">Empresas de Médio/Grande Porte</div>
+                                        <div class="stat-value">Milhares no Ceará</div>
+                                        <div class="stat-detail">Com mais de 50 empregados</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="market-stat">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-clipboard-check"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <div class="stat-title">Obrigações Legais</div>
+                                        <div class="stat-value">100%</div>
+                                        <div class="stat-detail">Precisam implementar PCMSO/PGR</div>
+                                    </div>
+                                </div>
+
+                                <div class="market-stat">
+                                    <div class="stat-icon">
+                                        <i class="fas fa-handshake"></i>
+                                    </div>
+                                    <div class="stat-info">
+                                        <div class="stat-title">Terceirização</div>
+                                        <div class="stat-value">Majoritária</div>
+                                        <div class="stat-detail">Contratam clínicas/consultorias externas</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="market-chart">
+                                <canvas id="marketChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conclusao" class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    <i class="fas fa-lightbulb"></i>
+                    Oportunidades e Estratégias
+                </h2>
+
+                <div class="opportunities-grid">
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Educação do Mercado</h3>
+                        <p>Mostrar que SST vai além do compliance e contribui para a estratégia de negócios</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h3>Inovação Tecnológica</h3>
+                        <p>Implementar soluções digitais, telemedicina e plataformas integradas</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Analytics e ROI</h3>
+                        <p>Desenvolver painéis que demonstrem o valor do investimento em SST</p>
+                    </div>
+
+                    <div class="opportunity-card">
+                        <div class="opportunity-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>ESG e Bem-estar</h3>
+                        <p>Integrar saúde ocupacional com programas de bem-estar corporativo</p>
+                    </div>
+                </div>
+
+                <div class="conclusion-summary">
+                    <div class="summary-card">
+                        <h3>Resumo Executivo</h3>
+                        <p>O mercado de SST no Ceará apresenta alta demanda regulatória com oportunidades significativas de diferenciação através de inovação tecnológica, foco em bem-estar e demonstração de valor através de analytics. A concentração de empresas na Região Metropolitana de Fortaleza oferece um mercado robusto para serviços especializados em saúde ocupacional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="logo.png" alt="Aventure Comunicação" class="footer-logo">
+                <p class="footer-text">Relatório desenvolvido pela Aventure Comunicação</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
