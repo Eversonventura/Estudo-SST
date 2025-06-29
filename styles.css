@@ -619,3 +619,25 @@ canvas {
     height: auto !important;
 }
 
+
+
+.awareness-chart canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+.chartjs-render-monitor {
+    white-space: normal !important;
+}
+
+.chartjs-legend li span {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+}
+
+@media (max-width: 768px) {
+    .chartjs-legend li {
+        font-size: 0.8em;
+    }
+}
+
